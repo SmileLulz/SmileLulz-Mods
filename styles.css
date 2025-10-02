@@ -7,13 +7,17 @@
        url('fonts/NFPixels-Regular.ttf') format('truetype'),
        url('fonts/NFPixels-Regular.svg#NFPixels-Regular') format('svg');
   font-style: normal;
-  font-weight: 400; /* Normal weight */
+  font-weight: 400;
   font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'NF Pixels', Arial;
-  font-weight: 400; /* Normal text */
+  font-weight: 400;
   background-color: #121212;
   color: #d0d0d0;
   margin: 0;
@@ -32,7 +36,7 @@ header .logo {
   color: #00c261;
   letter-spacing: 5px;
   margin-bottom: 10px;
-  font-weight: 400; /* Normal */
+  font-weight: 400;
 }
 
 .nav-links {
@@ -305,7 +309,7 @@ footer {
 footer a {
   color: #33ff99;
   text-decoration: none;
-  font-weight: 400; /* Normal */
+  font-weight: 400;
 }
 
 footer a:hover {
