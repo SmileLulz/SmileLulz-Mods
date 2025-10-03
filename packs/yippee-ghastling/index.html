@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Relics - SmileLulz' Mods</title>
+    <link rel="stylesheet" href="/mods/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SmileLulz' Mods</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mods/">Mods</a></li>
+                <li><a href="/packs/">Packs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mod-header">
+            <h1>Enchanted Relics</h1>
+            <div class="mod-banner">
+                <img src="/images/yippee_ghastling.png" alt="Enchanted Relics">
+            </div>
+        </section>
+
+        <section class="mod-buttons">
+            <a href="https://www.curseforge.com/minecraft/mc-mods/yippee-ghastling" target="_blank" class="mod-link-btn">CurseForge</a>
+            <a href="https://modrinth.com/mod/yippee-ghastling" target="_blank" class="mod-link-btn">Modrinth</a>
+            <button id="donate-btn" class="mod-link-btn" type="button">Support</button>
+        </section>
+
+        <section class="mod-description">
+            <div class="mod-desc-container">
+                <div id="mod-desc">Loading description...</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="donate-overlay" aria-hidden="true">
+        <div id="donate-popup" role="dialog" aria-modal="true" aria-labelledby="donate-title">
+            <h2 id="donate-title">Support The Developer</h2>
+            <div class="donate-buttons">
+                <a href="https://buymeacoffee.com/smilelulz" target="_blank" rel="noopener" class="donate-option">Buy Me A Coffee</a>
+                <a href="https://ko-fi.com/smilelulz" target="_blank" rel="noopener" class="donate-option">Ko-fi</a>
+            </div>
+            <button id="close-donate" class="close-donate-btn" type="button">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact: 
+            <a href="https://discord.gg/mtkBdGGRjU" target="_blank">Discord</a>
+        </p>
+        <p class="copyright">© 2025 SmileLulz. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        fetch('./README.md')
+        .then(res => res.text())
+        .then(md => {
+            document.getElementById('mod-desc').innerHTML = marked.parse(md);
+        })
+        .catch(err => {
+            document.getElementById('mod-desc').textContent = 'Failed to load description.';
+            console.error(err);
+        });
+    </script>
+
+    <script>
+        (function () {
+            const btn = document.getElementById('donate-btn');
+            const overlay = document.getElementById('donate-overlay');
+            const popup = document.getElementById('donate-popup');
+            const closeBtn = document.getElementById('close-donate');
+
+            if (!btn || !overlay || !popup || !closeBtn) return; // nothing to do
+
+            // open
+            btn.addEventListener('click', () => {
+                overlay.style.display = 'flex';
+                overlay.setAttribute('aria-hidden', 'false');
+                // prevent background scroll
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+                // focus the close button for keyboard users
+                closeBtn.focus();
+            });
+
+            // close helper
+            function closeDonate() {
+                overlay.style.display = 'none';
+                overlay.setAttribute('aria-hidden', 'true');
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+                btn.focus();
+            }
+
+            // close by clicking close button
+            closeBtn.addEventListener('click', closeDonate);
+
+            // close by clicking overlay (outside popup)
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) closeDonate();
+            });
+
+            // close by ESC key
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') {
+                    closeDonate();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

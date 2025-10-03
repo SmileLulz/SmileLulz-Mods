@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">SmileLulz Mods</div>
+    <div class="logo">SmileLulz' Mods</div>
     <nav>
       <ul class="nav-links">
         <li><a href="/mods/">Mods</a></li>
@@ -49,59 +49,48 @@
     <div class="mods-container">
       
       <div class="mod-card">
-        <a href="https://www.curseforge.com/minecraft/texture-packs/yippee-ghastling" target="_blank" class="mod-banner">
+        <a href="packs/yippee-ghastling/" class="mod-banner">
           <img src="/images/yippee_ghastling.png" class="mod-img">
         </a>
         <h3>Yippee Ghastling! [ResourcePack]</h3>
         <p>Ghatlings Say Yippeeee!!</p>
+        <div class="mod-links">
+          <a href="https://www.curseforge.com/minecraft/texture-packs/yippee-ghastling" target="_blank" class="mod-link-btn">CurseForge</a>
+          <a href="https://modrinth.com/mod/yippee-ghastling" target="_blank" class="mod-link-btn">Modrinth</a>
+        </div>
       </div>
-
+      
       <div class="mod-card">
-        <a href="https://www.curseforge.com/minecraft/mc-mods/heart-lantern" target="_blank" class="mod-banner">
+        <a href="mods/enchanted-relics/" class="mod-banner">
           <img src="/images/enchanted_relics.png" class="mod-img">
         </a>
         <h3>Enchanted Relics</h3>
         <p>Find Enchanted Relics all over the world, get max level of Enchantments!</p>
+        <div class="mod-links">
+          <a href="https://www.curseforge.com/minecraft/mc-mods/enchanted-relics" target="_blank" class="mod-link-btn">CurseForge</a>
+          <a href="https://modrinth.com/mod/enchanted-relics" target="_blank" class="mod-link-btn">Modrinth</a>
+        </div>
       </div>
 
       <div class="mod-card">
-        <a href="https://www.curseforge.com/minecraft/mc-mods/rpg-health-overhaul" target="_blank" class="mod-banner">
+        <a href="mods/rpg-health-overhaul/" class="mod-banner">
           <img src="/images/rpg_health_overhaul.png" class="mod-img">
         </a>
         <h3>RPG Health Overhaul</h3>
         <p>RPG-Like Health/Healing Features!</p>
+        <div class="mod-links">
+          <a href="https://www.curseforge.com/minecraft/mc-mods/rpg-health-overhaul" target="_blank" class="mod-link-btn">CurseForge</a>
+          <a href="https://modrinth.com/mod/rpg-health-overhaul" target="_blank" class="mod-link-btn">Modrinth</a>
+        </div>
       </div>
 
     </div>
   </section>
 
   <footer>
-    <p>Contact: 
-      <a href="https://discord.gg/mtkBdGGRjU" target="_blank">Discord</a> | 
-      <a href="/privacy-policy">Privacy Policy</a>
-    </p>
+    <p>Contact: <a href="https://discord.gg/mtkBdGGRjU" target="_blank">Discord</a></p>
     <p class="copyright">© 2025 SmileLulz. All rights reserved.</p>
   </footer>
-
-  <script>
-    fetch("https://modrinth-proxy.aplusgamer688.workers.dev/")
-      .then(res => res.json())
-      .then(mods => {
-        const container = document.querySelector(".mods-container");
-
-        mods.forEach(mod => {
-          const card = document.createElement("div");
-          card.className = "mod-card";
-          card.innerHTML = `
-            <img src="${mod.icon_url}" alt="${mod.title}">
-            <h3>${mod.title}</h3>
-            <p>${mod.description}</p>
-            <a href="https://modrinth.com/mod/${mod.slug}" target="_blank">View</a>
-          `;
-          container.appendChild(card);
-        });
-      });
-  </script>
 
   <script>
     const donateBtn = document.getElementById('donate-btn');

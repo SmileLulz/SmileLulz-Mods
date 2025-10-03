@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'NF Pixels';
+  src: url('../fonts/NFPixels-Regular.eot');
+  src: url('../fonts/NFPixels-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NFPixels-Regular.woff2') format('woff2'),
+       url('../fonts/NFPixels-Regular.woff') format('woff'),
+       url('../fonts/NFPixels-Regular.ttf') format('truetype'),
+       url('../fonts/NFPixels-Regular.svg#NFPixels-Regular') format('svg');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'NF Pixels', Arial;
+  font-weight: 400;
+  background-color: #121212;
+  color: #d0d0d0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1b1b1b;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #2a2a2a;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: #00c261;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #d0d0d0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #00c261;
+  border: 2px solid #2abb72;
+}
+
+main {
+  padding: 40px 5vw;
+}
+
+.mod-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mod-header h1 {
+  color: #00c261;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.mod-banner {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 5px solid #303030;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.mod-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mod-link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 50px;
+  font-size: 1.1rem;
+  font-family: 'NF Pixels', Arial;
+  color: #d0d0d0;
+  text-decoration: none;
+  border: 2px solid #2dca7c;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mod-link-btn:hover {
+  background-color: #2dca7c;
+  color: #121212;
+}
+
+
+
+#donate-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 164px;
+  height: 54px;
+  font-size: 1.1rem;
+  font-family: 'NF Pixels', Arial;
+  color: #d0d0d0;
+  text-decoration: none;
+  border: 2px solid #2dca7c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+#donate-btn:hover {
+  background-color: #2dca7c;
+  color: #121212;
+}
+
+
+#donate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#donate-popup {
+  background: #1f1f1f;
+  padding: 26px 22px;
+  border: 5px solid #303030;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  box-shadow: 0 0 30px rgba(45,202,124,0.08);
+}
+
+#donate-popup h2 {
+  color: #00c261;
+  font-size: 1.6rem;
+  margin: 6px 0 22px;
+  font-weight: 400;
+}
+
+.donate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.donate-option {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 48px;
+  font-size: 1.05rem;
+  font-family: 'NF Pixels', Arial;
+  color: #d0d0d0;
+  text-decoration: none;
+  border: 2px solid #2dca7c;
+  transition: all 0.18s ease;
+  background: transparent;
+}
+
+.donate-option:hover {
+  background-color: #2dca7c;
+  color: #121212;
+  border-color: #2dca7c;
+}
+
+.close-donate-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: 2px solid #2dca7c;
+  color: #d0d0d0;
+  font-size: 1rem;
+  font-family: 'NF Pixels', Arial;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.close-donate-btn:hover {
+  background-color: #2dca7c;
+  color: #121212;
+}
+
+#donate-overlay[aria-hidden="true"] { visibility: hidden; pointer-events: none; }
+#donate-overlay[aria-hidden="false"] { visibility: visible; pointer-events: auto; }
+
+
+
+.mod-description {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.mod-description h1, .mod-description h2, .mod-description h3 {
+  color: #00c261;
+}
+
+.mod-description p {
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.mod-description a {
+  color: #33ff99;
+  text-decoration: none;
+}
+
+.mod-description a:hover {
+  color: #66ffaa;
+}
+
+.mod-desc-container {
+  display: inline-block;
+  max-width: 90vw;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border: 5px solid #303030;
+  background-color: #1f1f1f;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.mod-desc-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.mod-desc-container a {
+  color: #33aaff;
+}
+
+.mod-desc-container a:hover {
+  color: #6dceff;
+  text-decoration: underline;
+}
+
+
+
+footer {
+  background-color: #1b1b1b;
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  border-top: 5px solid #2a2a2a;
+}
+
+footer a {
+  color: #33ff99;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #66ffaa;
+}
+
+
+
+@media (max-width: 600px) {
+  .mod-banner {
+    width: 150px;
+    height: 150px;
+  }
+  .mod-link-btn {
+    width: 140px;
+    height: 45px;
+    font-size: 1rem;
+  }
+  header .logo {
+    font-size: 2rem;
+  }
+  .nav-links li a {
+    font-size: 0.95rem;
+  }
+
+  #donate-btn {
+    width: 140px;
+    height: 45px;   /* match .mod-link-btn */
+    font-size: 1rem;
+  }
+
+  #donate-popup {
+    padding: 18px;
+    max-width: 340px;
+  }
+  .donate-option {
+    width: 140px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+  .mod-desc-container {
+    max-width: 95vw;
+    padding: 15px;
+  }
+}
