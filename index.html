@@ -77,11 +77,31 @@
 
   <footer>
     <p>Contact: 
-      <a href="https://discord.gg/smilelulz" target="_blank">Discord</a> | 
+      <a href="https://discord.gg/mtkBdGGRjU" target="_blank">Discord</a> | 
       <a href="/privacy-policy">Privacy Policy</a>
     </p>
     <p class="copyright">© 2025 SmileLulz. All rights reserved.</p>
   </footer>
+
+  <script>
+    fetch("https://modrinth-proxy.aplusgamer688.workers.dev/")
+      .then(res => res.json())
+      .then(mods => {
+        const container = document.querySelector(".mods-container");
+
+        mods.forEach(mod => {
+          const card = document.createElement("div");
+          card.className = "mod-card";
+          card.innerHTML = `
+            <img src="${mod.icon_url}" alt="${mod.title}">
+            <h3>${mod.title}</h3>
+            <p>${mod.description}</p>
+            <a href="https://modrinth.com/mod/${mod.slug}" target="_blank">View</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
 
   <script>
     const donateBtn = document.getElementById('donate-btn');
