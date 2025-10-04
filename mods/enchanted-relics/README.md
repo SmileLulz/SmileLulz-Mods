@@ -18,5 +18,5 @@
 
 ## Latest Changes:
 - **v1.2**
-  - Fixed: Claimed enchanted books are not working.
+  - Fixed : Claimed enchanted books are not working.
   - Now should also support multiplayer as well.

@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'NF Pixels', Arial;
+  font-family: 'NF Pixels', sans-serif;
   font-weight: 400;
   background-color: #121212;
   color: #d0d0d0;
@@ -114,7 +114,7 @@ main {
   width: 160px;
   height: 50px;
   font-size: 1.1rem;
-  font-family: 'NF Pixels', Arial;
+  font-family: 'NF Pixels', sans-serif;
   color: #d0d0d0;
   text-decoration: none;
   border: 2px solid #2dca7c;
@@ -137,7 +137,7 @@ main {
   width: 164px;
   height: 54px;
   font-size: 1.1rem;
-  font-family: 'NF Pixels', Arial;
+  font-family: 'NF Pixels', sans-serif;
   color: #d0d0d0;
   text-decoration: none;
   border: 2px solid #2dca7c;
@@ -172,7 +172,6 @@ main {
   width: 100%;
   max-width: 420px;
   box-sizing: border-box;
-  box-shadow: 0 0 30px rgba(45,202,124,0.08);
 }
 
 #donate-popup h2 {
@@ -197,7 +196,7 @@ main {
   width: 160px;
   height: 48px;
   font-size: 1.05rem;
-  font-family: 'NF Pixels', Arial;
+  font-family: 'NF Pixels', sans-serif;
   color: #d0d0d0;
   text-decoration: none;
   border: 2px solid #2dca7c;
@@ -219,7 +218,7 @@ main {
   border: 2px solid #2dca7c;
   color: #d0d0d0;
   font-size: 1rem;
-  font-family: 'NF Pixels', Arial;
+  font-family: 'NF Pixels', sans-serif;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -259,6 +258,7 @@ main {
 
 .mod-desc-container {
   display: inline-block;
+  width: 900px;
   max-width: 90vw;
   margin: 0 auto 30px;
   padding: 20px;
@@ -282,6 +282,32 @@ main {
 .mod-desc-container a:hover {
   color: #6dceff;
   text-decoration: underline;
+}
+
+.mod-desc-container strong,
+.mod-desc-container b {
+  color: #83cf83;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 720px;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px auto;
+}
+
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -324,10 +350,9 @@ footer a:hover {
 
   #donate-btn {
     width: 140px;
-    height: 45px;   /* match .mod-link-btn */
+    height: 45px;
     font-size: 1rem;
   }
-
   #donate-popup {
     padding: 18px;
     max-width: 340px;
@@ -337,6 +362,7 @@ footer a:hover {
     height: 44px;
     font-size: 0.95rem;
   }
+
   .mod-desc-container {
     max-width: 95vw;
     padding: 15px;

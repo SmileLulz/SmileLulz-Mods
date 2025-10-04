@@ -46,45 +46,7 @@
 
   <section id="mods">
     <h2>Latest Updates</h2>
-    <div class="mods-container">
-      
-      <div class="mod-card">
-        <a href="packs/yippee-ghastling/" class="mod-banner">
-          <img src="/images/yippee_ghastling.png" class="mod-img">
-        </a>
-        <h3>Yippee Ghastling! [ResourcePack]</h3>
-        <p>Ghatlings Say Yippeeee!!</p>
-        <div class="mod-links">
-          <a href="https://www.curseforge.com/minecraft/texture-packs/yippee-ghastling" target="_blank" class="mod-link-btn">CurseForge</a>
-          <a href="https://modrinth.com/mod/yippee-ghastling" target="_blank" class="mod-link-btn">Modrinth</a>
-        </div>
-      </div>
-      
-      <div class="mod-card">
-        <a href="mods/enchanted-relics/" class="mod-banner">
-          <img src="/images/enchanted_relics.png" class="mod-img">
-        </a>
-        <h3>Enchanted Relics</h3>
-        <p>Find Enchanted Relics all over the world, get max level of Enchantments!</p>
-        <div class="mod-links">
-          <a href="https://www.curseforge.com/minecraft/mc-mods/enchanted-relics" target="_blank" class="mod-link-btn">CurseForge</a>
-          <a href="https://modrinth.com/mod/enchanted-relics" target="_blank" class="mod-link-btn">Modrinth</a>
-        </div>
-      </div>
-
-      <div class="mod-card">
-        <a href="mods/rpg-health-overhaul/" class="mod-banner">
-          <img src="/images/rpg_health_overhaul.png" class="mod-img">
-        </a>
-        <h3>RPG Health Overhaul</h3>
-        <p>RPG-Like Health/Healing Features!</p>
-        <div class="mod-links">
-          <a href="https://www.curseforge.com/minecraft/mc-mods/rpg-health-overhaul" target="_blank" class="mod-link-btn">CurseForge</a>
-          <a href="https://modrinth.com/mod/rpg-health-overhaul" target="_blank" class="mod-link-btn">Modrinth</a>
-        </div>
-      </div>
-
-    </div>
+    <div class="mods-container"></div>
   </section>
 
   <footer>
@@ -92,24 +54,66 @@
     <p class="copyright">© 2025 SmileLulz. All rights reserved.</p>
   </footer>
 
+  <script src="latestMods.js"></script>
   <script>
-    const donateBtn = document.getElementById('donate-btn');
-    const donateOverlay = document.getElementById('donate-overlay');
-    const closeDonate = document.getElementById('close-donate');
+    const modsContainer = document.querySelector(".mods-container");
 
-    donateBtn.addEventListener('click', () => {
-      donateOverlay.style.display = 'flex';
+    latestMods.forEach(mod => {
+      const card = document.createElement("div");
+      card.className = "mod-card";
+
+      card.innerHTML = `
+        <a href="${mod.link}" class="mod-banner">
+          <img src="${mod.banner}" class="mod-img" alt="${mod.name}">
+        </a>
+        <h3>${mod.name}</h3>
+        <p>${mod.desc}</p>
+        <div class="mod-links">
+          <a href="${mod.curseforge}" target="_blank" class="mod-link-btn">CurseForge</a>
+          <a href="${mod.modrinth}" target="_blank" class="mod-link-btn">Modrinth</a>
+        </div>
+      `;
+      modsContainer.appendChild(card);
     });
+  </script>
 
-    closeDonate.addEventListener('click', () => {
-      donateOverlay.style.display = 'none';
-    });
+  <script>
+    (function () {
+      const btn = document.getElementById('donate-btn');
+      const overlay = document.getElementById('donate-overlay');
+      const popup = document.getElementById('donate-popup');
+      const closeBtn = document.getElementById('close-donate');
 
-    donateOverlay.addEventListener('click', (e) => {
-      if (e.target === donateOverlay) {
-        donateOverlay.style.display = 'none';
+      if (!btn || !overlay || !popup || !closeBtn) return;
+
+      btn.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        overlay.setAttribute('aria-hidden', 'false');
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      });
+
+      function closeDonate() {
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        btn.focus();
       }
-    });
+
+      closeBtn.addEventListener('click', closeDonate);
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeDonate();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') {
+          closeDonate();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
