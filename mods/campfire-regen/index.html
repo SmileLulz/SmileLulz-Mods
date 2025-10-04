@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enchanted Relics - SmileLulz' Mods</title>
+    <title>Campfire Regen - SmileLulz' Mods</title>
     <link rel="stylesheet" href="/mods/style.css">
 </head>
 <body>
@@ -20,15 +20,15 @@
 
     <main>
         <section class="mod-header">
-            <h1>Enchanted Relics</h1>
+            <h1>Campfire Regen</h1>
             <div class="mod-banner">
-                <img src="/images/enchanted_relics.png" alt="Enchanted Relics">
+                <img src="/images/campfire_regen.png" alt="Campfire Regen">
             </div>
         </section>
 
         <section class="mod-buttons">
-            <a href="https://www.curseforge.com/minecraft/mc-mods/enchanted-relics" target="_blank" class="mod-link-btn">CurseForge</a>
-            <a href="https://modrinth.com/mod/enchanted-relics" target="_blank" class="mod-link-btn">Modrinth</a>
+            <a href="https://www.curseforge.com/minecraft/mc-mods/campfire-regen" target="_blank" class="mod-link-btn">CurseForge</a>
+            <a href="https://modrinth.com/mod/campfire-regen" target="_blank" class="mod-link-btn">Modrinth</a>
             <a href="https://discord.gg/mtkBdGGRjU" target="_blank" class="mod-link-btn">Discord</a>
             <button id="donate-btn" class="mod-link-btn" type="button">Support</button>
         </section>
@@ -78,16 +78,20 @@
             const popup = document.getElementById('donate-popup');
             const closeBtn = document.getElementById('close-donate');
 
-            if (!btn || !overlay || !popup || !closeBtn) return;
+            if (!btn || !overlay || !popup || !closeBtn) return; // nothing to do
 
+            // open
             btn.addEventListener('click', () => {
                 overlay.style.display = 'flex';
                 overlay.setAttribute('aria-hidden', 'false');
+                // prevent background scroll
                 document.documentElement.style.overflow = 'hidden';
                 document.body.style.overflow = 'hidden';
+                // focus the close button for keyboard users
                 closeBtn.focus();
             });
 
+            // close helper
             function closeDonate() {
                 overlay.style.display = 'none';
                 overlay.setAttribute('aria-hidden', 'true');
@@ -96,12 +100,15 @@
                 btn.focus();
             }
 
+            // close by clicking close button
             closeBtn.addEventListener('click', closeDonate);
 
+            // close by clicking overlay (outside popup)
             overlay.addEventListener('click', (e) => {
                 if (e.target === overlay) closeDonate();
             });
 
+            // close by ESC key
             window.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') {
                     closeDonate();

@@ -6,8 +6,8 @@
 - **Post-Sleeping Health :** After a good night's sleep, your character health will regenerate a bit and also have 50% chance of providing you bonus health, making mornings a fresh start. Just keep in mind that your hunger level will also drop a little, so keep an eye on your food level.
 - **Post-Sleeping Hunger :** After waking up, your character hunger bar will decrease a little bit, making the game a bit realistic.
 - **Life Crystals :** Life Crystals permanently increases your max health upto 40 (20 Hearts). Life Crystal are generated in underground between y0 to y-63 in big open caves and can also be rarely found on cave tunnels.
-- **Recommended Mods for better experience :** [Campfire Regen](/mods/campfire-regen/) , [Heart Lantern](/mods/heart-lantern/)
-- **Recommended ResourcePack :** Heart Crystal Remodel ([CurseForge](https://www.curseforge.com/minecraft/texture-packs/heart-crystal-remodel)) ([Modrinth](https://modrinth.com/resourcepack/health-crystal-remodel))
+- **Recommended Mods for better experience :** <span><a href="/mods/campfire-regen/" target="_blank">Campfire Regen</a></span> , <span><a href="/mods/heart-lantern/" target="_blank">Heart Lantern</a></span>
+- **Recommended ResourcePack :** Heart Crystal Remodel (<span><a href="https://www.curseforge.com/minecraft/texture-packs/heart-crystal-remodel" target="_blank">CurseForge</a></span> , <span><a href="https://modrinth.com/resourcepack/health-crystal-remodel" target="_blank">Modrinth</a></span>)
 
 ![Gap](/images/gap.png)
 
