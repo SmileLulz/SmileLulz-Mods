@@ -1,13 +1,5 @@
 const mods = [
     {
-        title: "Enchanted Relics",
-        description: "Find Enchanted Relics all over the world, get max level of Enchantments!",
-        img: "/images/enchanted_relics.png",
-        curseforge: "https://www.curseforge.com/minecraft/mc-mods/enchanted-relics",
-        modrinth: "https://modrinth.com/mod/enchanted-relics",
-        link: "enchanted-relics/"
-    },
-    {
         title: "RPG Health Overhaul",
         description: "RPG-Like Health/Healing Features!",
         img: "/images/rpg_health_overhaul.png",
@@ -16,28 +8,12 @@ const mods = [
         link: "rpg-health-overhaul/"
     },
     {
-        title: "Heart Lantern",
-        description: "Heart Lantern grants health regeneration to nearby players.",
-        img: "/images/heart_lantern.png",
-        curseforge: "https://www.curseforge.com/minecraft/mc-mods/heart-lantern",
-        modrinth: "https://modrinth.com/mod/heart-lantern",
-        link: "heart-lantern/"
-    },
-    {
-        title: "Campfire Regen",
-        description: "Regenerate Your Health Using Campfire!",
-        img: "/images/campfire_regen.png",
-        curseforge: "https://www.curseforge.com/minecraft/mc-mods/campfire-regen",
-        modrinth: "https://modrinth.com/mod/campfire-regen",
-        link: "campfire-regen/"
-    },
-    {
-        title: "Advanced Door Bells",
-        description: "Wireless modern door bells! Yayy!!!",
-        img: "/images/advanced_door_bell.png",
-        curseforge: "https://www.curseforge.com/minecraft/mc-mods/advanced-door-bells",
-        modrinth: "https://modrinth.com/mod/advanced-door-bells",
-        link: "advanced-door-bells/"
+        title: "Enchanted Relics",
+        description: "Find Enchanted Relics all over the world, get max level of Enchantments!",
+        img: "/images/enchanted_relics.png",
+        curseforge: "https://www.curseforge.com/minecraft/mc-mods/enchanted-relics",
+        modrinth: "https://modrinth.com/mod/enchanted-relics",
+        link: "enchanted-relics/"
     },
     {
         title: "Wet Fart Sound",
@@ -46,6 +22,14 @@ const mods = [
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/wet-fart-sound",
         modrinth: "https://modrinth.com/mod/wet-fart-sound",
         link: "wet-fart-sound/"
+    },
+    {
+        title: "Advanced Door Bells",
+        description: "Wireless modern door bells! Yayy!!!",
+        img: "/images/advanced_door_bell.png",
+        curseforge: "https://www.curseforge.com/minecraft/mc-mods/advanced-door-bells",
+        modrinth: "https://modrinth.com/mod/advanced-door-bells",
+        link: "advanced-door-bells/"
     },
     {
         title: "The Forest Additions",
@@ -78,6 +62,22 @@ const mods = [
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/just-glowing-buttons-forge",
         modrinth: "https://modrinth.com/mod/just-glowing-buttons",
         link: "just-glowing-buttons-forge/"
+    },
+    {
+        title: "Heart Lantern",
+        description: "Heart Lantern grants health regeneration to nearby players.",
+        img: "/images/heart_lantern.png",
+        curseforge: "https://www.curseforge.com/minecraft/mc-mods/heart-lantern",
+        modrinth: "https://modrinth.com/mod/heart-lantern",
+        link: "heart-lantern/"
+    },
+    {
+        title: "Campfire Regen",
+        description: "Regenerate Your Health Using Campfire!",
+        img: "/images/campfire_regen.png",
+        curseforge: "https://www.curseforge.com/minecraft/mc-mods/campfire-regen",
+        modrinth: "https://modrinth.com/mod/campfire-regen",
+        link: "campfire-regen/"
     },
 ];
 
