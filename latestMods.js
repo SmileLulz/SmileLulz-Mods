@@ -1,5 +1,13 @@
 const latestMods = [
     {
+        name: "Campfire Regen",
+        banner: "/images/campfire_regen.png",
+        link: "mods/campfire-regen/",
+        desc: "Regenerate Your Health Using Campfire!",
+        curseforge: "https://www.curseforge.com/minecraft/mc-mods/campfire-regen",
+        modrinth: "https://modrinth.com/mod/campfire-regen"
+    },
+    {
         name: "Yippee Ghastling! [ResourcePack]",
         banner: "/images/yippee_ghastling.png",
         link: "packs/yippee-ghastling/",
@@ -14,13 +22,5 @@ const latestMods = [
         desc: "Find Enchanted Relics all over the world, get max level of Enchantments!",
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/enchanted-relics",
         modrinth: "https://modrinth.com/mod/enchanted-relics"
-    },
-    {
-        name: "RPG Health Overhaul",
-        banner: "/images/rpg_health_overhaul.png",
-        link: "mods/rpg-health-overhaul/",
-        desc: "RPG-Like Health/Healing Features!",
-        curseforge: "https://www.curseforge.com/minecraft/mc-mods/rpg-health-overhaul",
-        modrinth: "https://modrinth.com/mod/rpg-health-overhaul"
     }
 ];
