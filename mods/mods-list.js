@@ -17,7 +17,7 @@ const mods = [
     },
     {
         title: "Wet Fart Sound",
-        description: "Plays Wet Fart meme sound on player's death.",
+        description: "Plays Wet Fart meme sound on player's death",
         img: "/images/wet_fart_sound.png",
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/wet-fart-sound",
         modrinth: "https://modrinth.com/mod/wet-fart-sound",
@@ -33,7 +33,7 @@ const mods = [
     },
     {
         title: "The Forest Additions",
-        description: "Adds some things & features from The Forest game.",
+        description: "Adds some things & features from The Forest game",
         img: "/images/the_forest_additions.png",
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/the-forest-additions",
         modrinth: "https://modrinth.com/mod/the-forest-additions",
@@ -41,7 +41,7 @@ const mods = [
     },
     {
         title: "Heart Lantern - Reimagined",
-        description: "A Lantern that grants chosen effect to nearby players.",
+        description: "A Lantern that grants chosen effect to nearby players",
         img: "/images/heart_lantern_reimagined.png",
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/heart-lantern-reimagined",
         modrinth: "https://modrinth.com/mod/heart-lantern-reimagined",
@@ -65,7 +65,7 @@ const mods = [
     },
     {
         title: "Heart Lantern",
-        description: "Heart Lantern grants health regeneration to nearby players.",
+        description: "Heart Lantern grants health regeneration to nearby players",
         img: "/images/heart_lantern.png",
         curseforge: "https://www.curseforge.com/minecraft/mc-mods/heart-lantern",
         modrinth: "https://modrinth.com/mod/heart-lantern",

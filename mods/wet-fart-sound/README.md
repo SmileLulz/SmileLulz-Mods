@@ -1,8 +1,16 @@
 ## Plays Wet Fart Meme Sound Whenever a Player Dies
 
-You can request this mod for other versions on my discord's `#update-request` channel.
+This mod has been discontinued!
+
+Use [Wet Fart](/packs/wet-fart/) ResourcePack instead.
 
 <div class="video-wrapper">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4gcs5k8n-FY" 
-    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <iframe 
+    width="480" 
+    height="270" 
+    src="https://www.youtube-nocookie.com/embed/4gcs5k8n-FY" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
 </div>

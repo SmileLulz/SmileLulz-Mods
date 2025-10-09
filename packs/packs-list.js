@@ -1,12 +1,20 @@
 const mods = [
     {
+        title: "Wet Fart",
+        description: "Plays Wet Fart meme sound on player's death",
+        img: "/images/wet_fart_sound.png",
+        curseforge: "https://www.curseforge.com/minecraft/texture-packs/wet-fart",
+        modrinth: "https://modrinth.com/resourcepack/wet-fart",
+        link: "wet-fart/"
+    },
+    {
         title: "Yippee Ghastling!",
         description: "Ghatlings Say Yippeeee!!",
         img: "/images/yippee_ghastling.png",
         curseforge: "https://www.curseforge.com/minecraft/texture-packs/yippee-ghastling",
         modrinth: "https://modrinth.com/resourcepack/yippee-ghastling",
         link: "yippee-ghastling/"
-    },
+    }
 ];
 
 const container = document.getElementById("mods-container");

@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yippee Ghastling! - SmileLulz' Mods</title>
+    <title>Yippee Ghastling! • SmileLulz' Mods</title>
     <link rel="stylesheet" href="/packs/style.css">
+  
+    <meta property="og:title" content="Yippee Ghastling! • SmileLulz' Mods">
+    <meta property="og:description" content="Ghatlings Say Yippeeee!!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mods.smilelulz.com">
+    <meta property="og:image" content="https://mods.smilelulz.com/icons/og-banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yippee Ghastling! • SmileLulz' Mods">
+    <meta name="twitter:description" content="Ghatlings Say Yippeeee!!">
+    <meta name="twitter:image" content="https://mods.smilelulz.com/icons/og-banner.png">
+    <meta name="description" content="Ghatlings Say Yippeeee!!">
+    <script src="/meta-config.js" defer></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "SmileLulz' Mods",
+            "alternateName": "SmileLulz' Mods",
+            "url": "https://mods.smilelulz.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SmileLulz",
+            "url": "https://smilelulz.com/",
+            "logo": "https://smilelulz.com/ms-icon-310x310.png"
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -80,7 +111,6 @@
 
             if (!btn || !overlay || !popup || !closeBtn) return;
 
-            // open
             btn.addEventListener('click', () => {
                 overlay.style.display = 'flex';
                 overlay.setAttribute('aria-hidden', 'false');
@@ -110,7 +140,5 @@
             });
         })();
     </script>
-    
-    <script src="/meta-config.js"></script>
 </body>
 </html>
