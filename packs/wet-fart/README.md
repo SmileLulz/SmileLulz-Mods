@@ -1,7 +1,5 @@
 ## Plays Wet Fart Meme Sound Whenever a Player Dies
 
-### Now with more fart sounds!
-
 _This ResourcePack is the replacement of [Wet Fart Sound](/mods/wet-fart-sound/) mod._
 
 _So use this ResourcePack instead of the mod._
